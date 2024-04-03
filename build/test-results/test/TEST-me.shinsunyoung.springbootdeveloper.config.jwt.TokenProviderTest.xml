@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest" tests="5" skipped="0" failures="5" errors="0" timestamp="2024-04-03T07:23:41" hostname="205-" time="0.215">
+<testsuite name="me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest" tests="5" skipped="0" failures="5" errors="0" timestamp="2024-04-03T07:30:27" hostname="205-" time="0.213">
   <properties/>
-  <testcase name="validToken(): 유효한 토큰인 경우에 유효성 검증에 성공한다." classname="me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest" time="0.14">
+  <testcase name="validToken(): 유효한 토큰인 경우에 유효성 검증에 성공한다." classname="me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest" time="0.148">
     <failure message="java.lang.IllegalArgumentException: base64-encoded secret key cannot be null or empty." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: base64-encoded secret key cannot be null or empty.
 	at io.jsonwebtoken.lang.Assert.hasText(Assert.java:135)
 	at io.jsonwebtoken.impl.DefaultJwtBuilder.signWith(DefaultJwtBuilder.java:97)
@@ -94,7 +94,7 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="validToken(): 만료된 토큰인 경우에 유효성 검증에 실패한다." classname="me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest" time="0.002">
+  <testcase name="validToken(): 만료된 토큰인 경우에 유효성 검증에 실패한다." classname="me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest" time="0.003">
     <failure message="java.lang.IllegalArgumentException: base64-encoded secret key cannot be null or empty." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: base64-encoded secret key cannot be null or empty.
 	at io.jsonwebtoken.lang.Assert.hasText(Assert.java:135)
 	at io.jsonwebtoken.impl.DefaultJwtBuilder.signWith(DefaultJwtBuilder.java:97)
@@ -280,7 +280,7 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="getUserId(): 토큰으로 유저 ID를 가져올 수 있다." classname="me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest" time="0.004">
+  <testcase name="getUserId(): 토큰으로 유저 ID를 가져올 수 있다." classname="me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest" time="0.003">
     <failure message="java.lang.IllegalArgumentException: base64-encoded secret key cannot be null or empty." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: base64-encoded secret key cannot be null or empty.
 	at io.jsonwebtoken.lang.Assert.hasText(Assert.java:135)
 	at io.jsonwebtoken.impl.DefaultJwtBuilder.signWith(DefaultJwtBuilder.java:97)
@@ -373,7 +373,7 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="generateToken(): 유저 정보와 만료 기간을 전달해 토큰을 만들 수 있다." classname="me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest" time="0.06">
+  <testcase name="generateToken(): 유저 정보와 만료 기간을 전달해 토큰을 만들 수 있다." classname="me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest" time="0.051">
     <failure message="java.lang.IllegalArgumentException: base64-encoded secret key cannot be null or empty." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: base64-encoded secret key cannot be null or empty.
 	at io.jsonwebtoken.lang.Assert.hasText(Assert.java:135)
 	at io.jsonwebtoken.impl.DefaultJwtBuilder.signWith(DefaultJwtBuilder.java:97)
@@ -467,14 +467,14 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <system-out><![CDATA[16:23:37.253 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [TokenProviderTest]: using SpringBootContextLoader
-16:23:37.258 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-16:23:37.259 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest]: TokenProviderTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-16:23:37.279 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [TokenProviderTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
-16:23:37.337 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\admin\Desktop\chapter12\build\classes\java\main\me\shinsunyoung\springbootdeveloper\SpringBootDeveloperApplication.class]
-16:23:37.338 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration me.shinsunyoung.springbootdeveloper.SpringBootDeveloperApplication for test class me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest
-16:23:37.415 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [TokenProviderTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, WithSecurityContextTestExecutionListener, EventPublishingTestExecutionListener, ReactorContextTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
-16:23:37.416 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [TokenProviderTest], class annotated with @DirtiesContext [false] with mode [null]
+  <system-out><![CDATA[16:30:23.414 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [TokenProviderTest]: using SpringBootContextLoader
+16:30:23.418 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:30:23.418 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest]: TokenProviderTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:30:23.437 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [TokenProviderTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+16:30:23.492 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\admin\Desktop\chapter12\build\classes\java\main\me\shinsunyoung\springbootdeveloper\SpringBootDeveloperApplication.class]
+16:30:23.493 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration me.shinsunyoung.springbootdeveloper.SpringBootDeveloperApplication for test class me.shinsunyoung.springbootdeveloper.config.jwt.TokenProviderTest
+16:30:23.565 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [TokenProviderTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, WithSecurityContextTestExecutionListener, EventPublishingTestExecutionListener, ReactorContextTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+16:30:23.566 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [TokenProviderTest], class annotated with @DirtiesContext [false] with mode [null]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -484,17 +484,17 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.2)
 
-2024-04-03T16:23:37.657+09:00  INFO 16512 --- [    Test worker] m.s.s.config.jwt.TokenProviderTest       : Starting TokenProviderTest using Java 17.0.10 with PID 16512 (started by admin in C:\Users\admin\Desktop\chapter12)
-2024-04-03T16:23:37.658+09:00  INFO 16512 --- [    Test worker] m.s.s.config.jwt.TokenProviderTest       : No active profile set, falling back to 1 default profile: "default"
-2024-04-03T16:23:38.201+09:00  INFO 16512 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-04-03T16:23:38.251+09:00  INFO 16512 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 3 JPA repository interfaces.
-2024-04-03T16:23:38.614+09:00  INFO 16512 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-04-03T16:23:38.765+09:00  INFO 16512 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:5a515f47-e6da-4c8b-975d-5e8e14a19c1f user=SA
-2024-04-03T16:23:38.767+09:00  INFO 16512 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-04-03T16:23:38.807+09:00  INFO 16512 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-04-03T16:23:38.866+09:00  INFO 16512 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
-2024-04-03T16:23:39.025+09:00  WARN 16512 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2024-04-03T16:23:39.138+09:00  INFO 16512 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2024-04-03T16:30:23.800+09:00  INFO 12464 --- [    Test worker] m.s.s.config.jwt.TokenProviderTest       : Starting TokenProviderTest using Java 17.0.10 with PID 12464 (started by admin in C:\Users\admin\Desktop\chapter12)
+2024-04-03T16:30:23.801+09:00  INFO 12464 --- [    Test worker] m.s.s.config.jwt.TokenProviderTest       : No active profile set, falling back to 1 default profile: "default"
+2024-04-03T16:30:24.336+09:00  INFO 12464 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-03T16:30:24.385+09:00  INFO 12464 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 3 JPA repository interfaces.
+2024-04-03T16:30:24.715+09:00  INFO 12464 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-03T16:30:24.859+09:00  INFO 12464 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:10993312-8548-428b-ae9d-299178439e8a user=SA
+2024-04-03T16:30:24.861+09:00  INFO 12464 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-03T16:30:24.900+09:00  INFO 12464 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-03T16:30:24.956+09:00  INFO 12464 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2024-04-03T16:30:25.110+09:00  WARN 12464 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2024-04-03T16:30:25.223+09:00  INFO 12464 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
 Hibernate: 
     
     drop table if exists article cascade 
@@ -544,20 +544,20 @@ Hibernate:
     
     alter table if exists users 
        add constraint UK_2ty1xmrrgtn89xt7kyxx6ta7h unique (nickname)
-2024-04-03T16:23:39.686+09:00  INFO 16512 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2024-04-03T16:23:39.693+09:00  INFO 16512 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-04-03T16:23:40.172+09:00  WARN 16512 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-04-03T16:23:40.768+09:00  INFO 16512 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3ba50851, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c20841d, org.springframework.security.web.context.SecurityContextHolderFilter@6b247ef6, org.springframework.security.web.header.HeaderWriterFilter@492d38a2, org.springframework.security.web.authentication.logout.LogoutFilter@46c61d1, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@38991781, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@3c577368, me.shinsunyoung.springbootdeveloper.config.TokenAuthenticationFilter@63a9af28, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f10927f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e4c0bc7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a1dd8eb, org.springframework.security.web.session.SessionManagementFilter@31885b4b, org.springframework.security.web.access.ExceptionTranslationFilter@5f8a29ca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f4b8027]
-2024-04-03T16:23:41.120+09:00  INFO 16512 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:5a515f47-e6da-4c8b-975d-5e8e14a19c1f'
-2024-04-03T16:23:41.168+09:00  WARN 16512 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.PathRequest$H2ConsoleRequestMatcher@8318808. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2024-04-03T16:23:41.169+09:00  INFO 16512 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will not secure org.springframework.boot.autoconfigure.security.servlet.PathRequest$H2ConsoleRequestMatcher@8318808
-2024-04-03T16:23:41.169+09:00  WARN 16512 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/img/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2024-04-03T16:23:41.169+09:00  INFO 16512 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/img/**']
-2024-04-03T16:23:41.170+09:00  WARN 16512 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2024-04-03T16:23:41.170+09:00  INFO 16512 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/css/**']
-2024-04-03T16:23:41.170+09:00  WARN 16512 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
-2024-04-03T16:23:41.170+09:00  INFO 16512 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/js/**']
-2024-04-03T16:23:41.231+09:00  INFO 16512 --- [    Test worker] m.s.s.config.jwt.TokenProviderTest       : Started TokenProviderTest in 3.779 seconds (process running for 4.687)
+2024-04-03T16:30:25.789+09:00  INFO 12464 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-04-03T16:30:25.795+09:00  INFO 12464 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-03T16:30:26.211+09:00  WARN 12464 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-03T16:30:26.754+09:00  INFO 12464 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3ba50851, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c20841d, org.springframework.security.web.context.SecurityContextHolderFilter@6b247ef6, org.springframework.security.web.header.HeaderWriterFilter@492d38a2, org.springframework.security.web.authentication.logout.LogoutFilter@46c61d1, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@38991781, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@3c577368, me.shinsunyoung.springbootdeveloper.config.TokenAuthenticationFilter@63a9af28, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f10927f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e4c0bc7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1a1dd8eb, org.springframework.security.web.session.SessionManagementFilter@31885b4b, org.springframework.security.web.access.ExceptionTranslationFilter@5f8a29ca, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f4b8027]
+2024-04-03T16:30:26.996+09:00  INFO 12464 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:10993312-8548-428b-ae9d-299178439e8a'
+2024-04-03T16:30:27.039+09:00  WARN 12464 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.PathRequest$H2ConsoleRequestMatcher@53630682. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2024-04-03T16:30:27.040+09:00  INFO 12464 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will not secure org.springframework.boot.autoconfigure.security.servlet.PathRequest$H2ConsoleRequestMatcher@53630682
+2024-04-03T16:30:27.040+09:00  WARN 12464 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/img/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2024-04-03T16:30:27.040+09:00  INFO 12464 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/img/**']
+2024-04-03T16:30:27.040+09:00  WARN 12464 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2024-04-03T16:30:27.040+09:00  INFO 12464 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/css/**']
+2024-04-03T16:30:27.040+09:00  WARN 12464 --- [    Test worker] o.s.s.c.a.web.builders.WebSecurity       : You are asking Spring Security to ignore Mvc [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2024-04-03T16:30:27.041+09:00  INFO 12464 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will not secure Mvc [pattern='/js/**']
+2024-04-03T16:30:27.087+09:00  INFO 12464 --- [    Test worker] m.s.s.config.jwt.TokenProviderTest       : Started TokenProviderTest in 3.484 seconds (process running for 4.372)
 Hibernate: 
     insert 
     into
