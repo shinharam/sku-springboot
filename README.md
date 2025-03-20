@@ -96,7 +96,8 @@
 >     가비아에 cname태그로 DNS와 연결하여 배포한다.
 >     
 > 
-> ![흐름도 (1).png](attachment:261a98ff-2ba5-4f50-915a-8dcd5e41a02b:흐름도_(1).png)
+> ![image](https://github.com/user-attachments/assets/c74ce223-1a9d-47c5-81c5-2addcbd9a93f)
+
 > 
 
 ---
